@@ -10,7 +10,7 @@
 pip install -U cookiecutter
 ```
 
-**Install mkdocs and mkdocstrings to utilise the [MkDocs](https://www.mkdocs.org/) template (optional).**
+**(Optional) Install mkdocs and mkdocstrings to utilise the [MkDocs](https://www.mkdocs.org/) template.**
 ```bash
 pip install mkdocs mkdocstrings[python]
 ```
@@ -19,6 +19,9 @@ pip install mkdocs mkdocstrings[python]
 ```bash
 cookiecutter https://github.com/StephenRicher/python-cookie.git
 ```
+
+## Recommended Setup
+Following template creation, follow these steps to get you started.
 
 **Change directory into your package.**
 ```bash
@@ -37,7 +40,7 @@ git commit -m "Initial commit"
 pip install -e .
 ```
 
-**Take a look at the default MkDocs template (optional).**
+**Take a look at the default [MkDocs](https://www.mkdocs.org/) template (optional).**
 ```bash
 mkdocs serve
 ```
