@@ -2,7 +2,7 @@
   "full_name": "Stephen Richer",
   "email": "stephen.richer@proton.me",
   "github_username": "StephenRicher",
-  "project_name": "Numbers",
+  "project_name": "Number Test",
   "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
   "project_short_description": "Boilerplate package with example numerical tests.",
   "pypi_username": "{{ cookiecutter.github_username }}",
