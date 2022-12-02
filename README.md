@@ -15,7 +15,7 @@ pip install -U cookiecutter
 pip install mkdocs mkdocstrings[python]
 ```
 
-**Generate and configure Python package project.**
+**Generate and configure the cookiecutter Python package.**
 ```bash
 cookiecutter https://github.com/StephenRicher/python-cookie.git
 ```
@@ -42,7 +42,7 @@ pip install -e .
 mkdocs serve
 ```
 
-**Being building your Package!**
+**Begin modifying the template and building your package!**
 
 ## Selecting a Build Mode
 During setup the user will be prompted to select one of three possible build modes.
