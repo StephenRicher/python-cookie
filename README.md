@@ -2,6 +2,15 @@
 
 ## A simple template for building template modules and command-line interfaces in Python.
 
+## Table of contents
+  * [Quickstart](#quickstart)
+  * [Recommended Setup](#recommended-setup)
+  * [Selecting a Build Mode](#selecting-a-build-mode)
+    * [1. Package Only](#1-package-only)
+  * [License](#license)
+  * [Contact](#contact)
+
+
 ## Quickstart
 
 **Install the latest Cookiecutter if you haven't installed it yet.**
