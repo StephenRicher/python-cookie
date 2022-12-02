@@ -9,9 +9,11 @@
 !README_files/*
 !Dockerfile
 !.dockerignore
+!docs/
 
 # ...even if they are in subdirectories
 !*/
 
 .ipynb_checkpoints
 package_testing/
+site/

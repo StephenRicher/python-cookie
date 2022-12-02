@@ -1,9 +1,14 @@
+#!/usr/bin/env python3
+
 import os
 import sys
 
+
 REMOVE_PATHS = [
-    '{%- if cookiecutter.command_line_interface|lower == "no" %} src/{{ cookiecutter.project_slug }}/cli.py {% endif %}',
+    '{%- if cookiecutter.command_line_interface|lower == "no" %} '
+    'src/{{ cookiecutter.project_slug }}/cli.py {% endif %}',
 ]
+
 
 for path in REMOVE_PATHS:
     path = path.strip()

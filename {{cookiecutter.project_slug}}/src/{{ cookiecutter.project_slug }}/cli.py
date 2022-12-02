@@ -9,9 +9,9 @@ import argparse
 from timeit import default_timer
 from ._version import __version__
 {%- if cookiecutter.command_line_interface|lower == 'yes (with subcommand)' %}
-from .{{ cookiecutter.project_slug }} import prime_cli, fibonacci_cli
+from .{{ cookiecutter.project_slug }} import prime, fibonacci
 {% else %}
-from .{{ cookiecutter.project_slug }} import prime_cli
+from .{{ cookiecutter.project_slug }} import prime
 {% endif %}
 
 def parseArgs() -> argparse.Namespace:
@@ -90,3 +90,21 @@ def _getBaseParser(version: str) -> argparse.Namespace:
         '--verbose', action='store_const', const=logging.DEBUG,
         default=logging.ERROR, help='verbose logging for debugging')
     return parser
+
+
+def prime_cli(number: int) -> bool:
+    """ Check if an input number is prime. """
+    if prime(number):
+        print(f'{number} is a prime number!')
+    else:
+        print(f'{number} is not prime number!')
+
+{% if cookiecutter.command_line_interface|lower == 'yes (with subcommand)' %}
+def fibonacci_cli(number: int) -> bool:
+    """ Check if an input number is prime. """
+    if fibonacci(number):
+        print(f'{number} is part of the fibonacci sequence!')
+    else:
+        print(f'{number} is not part of the fibonacci sequence!')
+
+{% endif %}
