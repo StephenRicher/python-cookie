@@ -30,5 +30,4 @@ Distributed under the MIT License. _See [LICENSE](./LICENSE) for more informatio
 
 
 ## Contact
-If you have any other questions please contact the author **[{{ cookiecutter.full_name }}]**
-at {{ cookiecutter.email }}
+If you have any other questions please contact the author, [{{ cookiecutter.full_name }}](mailto:{{ cookiecutter.email }}?subject=[GitHub]%20{{ cookiecutter.project_slug }}).
