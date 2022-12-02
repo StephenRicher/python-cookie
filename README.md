@@ -65,7 +65,7 @@ True
 ### 2. Command-line Interface (_without_ subcommands)
 Standard command line interface with single point of entry.
 
-```shell
+```console
 stephen@pc:$ number_test --help
 usage: number_test [-h] [--version] [--verbose] [number]
 
@@ -86,7 +86,7 @@ Stephen Richer, (stephen.richer@proton.me)
 ### 3. Command-line Interface (_with_ sub-commands)
 Command line interface with sub-commands offering multiple entry points.
 
-```shell
+```console
 stephen@pc:$ number_test --help
 usage: number_test [-h] [--version] [--verbose] Commands ...
 
