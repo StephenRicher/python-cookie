@@ -59,7 +59,7 @@ Follow these steps to install dependencies and configure your Cookiecutter templ
   <summary><strong>1. Install the latest cookiecutter if you haven't installed it yet.</strong></summary>
 
   Unix/macOS
-  ```shell
+  ```sh
   python3 -m pip install --upgrade cookiecutter
   ```
 
