@@ -9,7 +9,8 @@
   * [Recommended Setup](#recommended-setup)
   * [Selecting a Build Mode](#selecting-a-build-mode)
     * [1. Package Only](#1-package-only)
-    * [2. Command-line Interface (without subcommands)](#2-command-line-interface-without-subcommands)
+    * [2. Command Line Interface (without subcommands)](#2-command-line-interface-without-subcommands)
+    * [3. Command Line Interface (with subcommands)](#2-command-line-interface-with-subcommands)
   * [License](#license)
   * [Contact](#contact)
 
@@ -57,8 +58,8 @@ Follow these steps to install dependencies and configure your Cookiecutter templ
 
 <details>
   <summary><strong>1. Install the latest cookiecutter if you haven't installed it yet.</strong></summary>
-  Unix/macOS
 
+  Unix/macOS
   ```bash
   python3 -m pip install --upgrade cookiecutter
   ```
@@ -81,8 +82,8 @@ Follow these steps to install dependencies and configure your Cookiecutter templ
 
 <details>
   <summary><strong>3. Install tools for Packaging and Documentation.</strong></summary>
-  Unix/macOS
 
+  Unix/macOS
   ```bash
   python3 -m pip install --upgrade twine setuptools mkdocs mkdocstrings[python]
   ```
@@ -99,8 +100,8 @@ Following template creation, follow these steps to get you started.
 
 <details>
   <summary><strong>1. Change directory into your package.</strong></summary>
+  
   Unix/macOS
-
   ```bash
   cd package_name
   ```
@@ -195,7 +196,7 @@ True
 ```
 
 
-### 2. Command-line Interface (_without_ subcommands)
+### 2. Command Line Interface (_without_ subcommands)
 Standard command line interface with single point of entry.
 
 ```console
@@ -216,7 +217,7 @@ Stephen Richer, (stephen.richer@proton.me)
 ```
 
 
-### 3. Command-line Interface (_with_ sub-commands)
+### 3. Command Line Interface (_with_ sub-commands)
 Command line interface with sub-commands offering multiple entry points.
 
 ```console
