@@ -59,7 +59,7 @@ Follow these steps to install dependencies and configure your Cookiecutter templ
   <summary><strong>1. Install the latest cookiecutter if you haven't installed it yet.</strong></summary>
 
   Unix/macOS
-  ```shellscript
+  ```shell
   python3 -m pip install --upgrade cookiecutter
   ```
 
@@ -88,7 +88,7 @@ Follow these steps to install dependencies and configure your Cookiecutter templ
   ```
 
   Windows
-  ```bash
+  ```powershell
   py -m pip install --upgrade twine setuptools mkdocs mkdocstrings[python]
   ```
 </details>
@@ -106,7 +106,7 @@ Following template creation, follow these steps to get you started.
   ```
 
   Windows
-  ```bash
+  ```powershell
   cd package_name
   ```
 </details>
@@ -130,7 +130,7 @@ Following template creation, follow these steps to get you started.
   ```
 
   Windows
-  ```bash
+  ```powershell
   py -m pip install .
   ```
 </details>
@@ -170,7 +170,7 @@ Following template creation, follow these steps to get you started.
   python3 -m twine upload --repository testpypi dist/*
   ```
   Windows
-  ```bash
+  ```powershell
   py -m build
   py -m twine upload --repository testpypi dist/*
   ```
