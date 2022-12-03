@@ -7,6 +7,6 @@
   "project_short_description": "Boilerplate package with example numerical tests.",
   "pypi_username": "{{ cookiecutter.github_username }}",
   "command_line_interface": ["No", "Yes (without subcommand)",  "Yes (with subcommand)"],
-  "include_mkdocs": ["No", "Yes"],
-  "detailed_readme": ["No", "Yes"]
+  "readme_type": ["Simple", "Detailed"],
+  "include_mkdocs": ["No", "Yes"]
 }

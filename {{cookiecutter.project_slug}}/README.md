@@ -4,7 +4,7 @@
 
 [![status: experimental](https://github.com/GIScience/badges/raw/master/status/experimental.svg)](https://github.com/GIScience/badges#experimental)
 ![build: status](https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/actions/workflows/tests.yaml/badge.svg)
-{% if cookiecutter.detailed_readme|lower == 'yes' %}
+{% if cookiecutter.readme_type|lower == 'detailed' %}
 ### Table of contents
 * [Features](#features)
 * [Installation](#installation)
