@@ -100,7 +100,7 @@ Following template creation, follow these steps to get you started.
 
 <details>
   <summary><strong>1. Change directory into your package.</strong></summary>
-  
+
   Unix/macOS
   ```bash
   cd package_name
@@ -217,7 +217,7 @@ Stephen Richer, (stephen.richer@proton.me)
 ```
 
 
-### 3. Command Line Interface (_with_ sub-commands)
+### 3. Command Line Interface (_with_ subcommands)
 Command line interface with sub-commands offering multiple entry points.
 
 ```console
