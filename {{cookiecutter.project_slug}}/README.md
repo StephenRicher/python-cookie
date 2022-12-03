@@ -8,8 +8,6 @@
 ### Table of contents
 * [Features](#features)
 * [Installation](#installation)
-  * [Unix/macOS](#unixmacos)
-  * [Windows](#windows)
 * [Usage](#usage)
 * [Contributing](#contributing)
 * [License](#license)
@@ -21,35 +19,58 @@ A brief description of the projects primary features.
 ### Installation
 Installation is possible via `pip` as shown below.
 
+Unix/macOS
 ```bash
-pip install {{ cookiecutter.project_slug }}
+python3 -m pip install {{ cookiecutter.project_slug }}
 ```
 
-However, to manage dependencies and avoid conflicts it is recommended to install within a virtual environment.
+Windows
+```bash
+py -m pip install {{ cookiecutter.project_slug }}
+```
 
-#### Unix/macOS
-Run the following commands via Terminal.
+<details>
+  <summary><strong><font size="+1">Alternative Install Methods (optional)</font></strong></summary>
+
+<details>
+  <summary><strong><font size="+0.5">1. Install within a Virtual Environment</font></strong></summary>
+
+<details>
+  <summary><strong>Unix/macOS</strong></summary>
 
 ```bash
 python -m venv {{ cookiecutter.project_slug }}
-source esneft_tools/bin/activate
-pip install {{ cookiecutter.project_slug }}
+source {{ cookiecutter.project_slug }}/bin/activate
+python3 -m pip install {{ cookiecutter.project_slug }}
 ```
+</details>
 
-#### Windows
-Run the following commands via PowerShell.
+<details>
+  <summary><strong>Windows</strong></summary>
 
-```PowerShell
+```bash
 py -m venv {{ cookiecutter.project_slug }}
 {{ cookiecutter.project_slug }}/Scripts/Activate.ps1
-pip install {{ cookiecutter.project_slug }}
+py -m pip install {{ cookiecutter.project_slug }}
 ```
 
 If running scripts is disabled on your system then run the following command before activating your environment.
 
-```PowerShell
+```bash
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
+</details>
+</details>
+
+<details>
+<summary><strong><font size="+0.5">2. Install within a Docker container</font></strong></summary>
+
+```bash
+docker build -t {{ cookiecutter.project_slug }} {{ cookiecutter.project_slug }}
+docker run -it {{ cookiecutter.project_slug }}
+```
+</details>
+</details>
 
 ### Usage
 Some simple examples of basic usage.
@@ -71,11 +92,19 @@ Distributed under the MIT License. _See [LICENSE](./LICENSE) for more informatio
 If you have any other questions please contact the author, [{{ cookiecutter.full_name }}](mailto:{{ cookiecutter.email }}?subject=[GitHub]%20{{ cookiecutter.project_slug }}).
 {% else %}
 ### Features
-A brief description of the projects primary features.
+A brief description of the project's primary features.
 
 ### Installation
+Installation is possible via `pip` as shown below.
+
+Unix/macOS
 ```bash
-pip install {{ cookiecutter.project_slug }}
+python3 -m pip install {{ cookiecutter.project_slug }}
+```
+
+Windows
+```bash
+py -m pip install {{ cookiecutter.project_slug }}
 ```
 
 ### Usage

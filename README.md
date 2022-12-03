@@ -66,7 +66,7 @@ Follow these steps to install dependencies and configure your Cookiecutter templ
 
   Windows
   ```bash
-  py -m pip install --upgrade twine cookiecutter
+  py -m pip install --upgrade cookiecutter
   ```
 </details>
 

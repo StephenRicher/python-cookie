@@ -7,7 +7,7 @@ import sys
 import logging
 import argparse
 from timeit import default_timer
-from ._version import __version__
+from {{ cookiecutter.project_slug }} import __version__
 {%- if cookiecutter.command_line_interface|lower == 'yes (with subcommand)' %}
 from .{{ cookiecutter.project_slug }} import prime, fibonacci
 {% else %}
