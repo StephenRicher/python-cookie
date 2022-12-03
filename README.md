@@ -25,7 +25,7 @@ project
 │   LICENSE    
 │   Dockerfile
 │   pyproject.toml       # Update package version and dependencies etc.
-│   mkdocs.yml           # (Optional) MkDocs mode only
+│   mkdocs.yml           # MkDocs mode only (optional)
 │   .gitignore
 │   .dockerignore
 │   
@@ -35,12 +35,12 @@ project
 │       │   __init__.py
 │       │   project.py   # Write public-facing code, for user import, here.
 │       │   utils.py     # Write non-public code here.
-│       │   cli.py       # (Optional) Command line mode only
+│       │   cli.py       # Command line mode only (optional)
 │   
 └───tests                # Write all your tests here.
 │   │   test_project.py
 │   
-└───docs                 # (Optional) MkDocs mode only
+└───docs                 # MkDocs mode only (optional)
 │   │   about.md
 │   │   index.md
 │   │   installation.md
@@ -56,16 +56,18 @@ project
 Follow these steps to install dependencies and configure your Cookiecutter template.
 
 <details>
-  <summary><strong>1. Install the latest cookiecutter if you haven't installed it yet.</strong></summary>
+  <summary><strong>1. Install the latest cookiecutter and optional tools for packaging and documentation.</strong></summary>
 
   Unix/macOS
   ```shell
-  python3 -m pip install --upgrade cookiecutter
+  python3 -m pip install --upgrade \
+    cookiecutter twine setuptools mkdocs mkdocstrings[python]
   ```
 
   Windows
   ```powershell
-  py -m pip install --upgrade cookiecutter
+  py -m pip install --upgrade \
+    cookiecutter twine setuptools mkdocs mkdocstrings[python]
   ```
 </details>
 
@@ -78,43 +80,14 @@ Follow these steps to install dependencies and configure your Cookiecutter templ
   ```
 </details>
 
-
-<details>
-  <summary><strong>3. Install tools for Packaging and Documentation.</strong></summary>
-
-  Unix/macOS
-  ```bash
-  python3 -m pip install --upgrade twine setuptools mkdocs mkdocstrings[python]
-  ```
-
-  Windows
-  ```powershell
-  py -m pip install --upgrade twine setuptools mkdocs mkdocstrings[python]
-  ```
-</details>
-
-
 ## Recommended Setup
 Following template creation, follow these steps to get you started.
 
 <details>
-  <summary><strong>1. Change directory into your package.</strong></summary>
-
-  Unix/macOS
-  ```bash
-  cd package_name
-  ```
-
-  Windows
-  ```powershell
-  cd package_name
-  ```
-</details>
-
-<details>
-  <summary><strong>2. Create a Git repository.</strong></summary>
+  <summary><strong>1. Create a Git repository.</strong></summary>
 
   ```bash
+  cd package_name
   git init
   git add .
   git commit -m "Initial commit"
@@ -122,7 +95,7 @@ Following template creation, follow these steps to get you started.
 </details>
 
 <details>
-  <summary><strong>3. Install an editable version of your package to your system.</strong></summary>
+  <summary><strong>2. Install an editable version of your package to your system.</strong></summary>
 
   Unix/macOS
   ```bash
@@ -136,15 +109,7 @@ Following template creation, follow these steps to get you started.
 </details>
 
 <details>
-  <summary><strong>4. Take a look at the default MkDocs template (optional).</strong></summary>
-
-  ```bash
-  mkdocs serve
-  ```
-</details>
-
-<details>
-  <summary><strong>5. Begin modifying the template and building your package!</strong></summary>
+  <summary><strong>3. Begin modifying the template and building your package!</strong></summary>
 
   ```python
   def hello(name: str = 'World') -> str:
@@ -162,7 +127,7 @@ Following template creation, follow these steps to get you started.
 </details>
 
 <details>
-  <summary><strong>6. Upload your code to TestPyPI.</strong></summary>
+  <summary><strong>4. Upload your code to TestPyPI.</strong></summary>
 
   Unix/macOS
   ```bash
@@ -176,6 +141,13 @@ Following template creation, follow these steps to get you started.
   ```
 </details>
 
+<details>
+  <summary><strong>5. Take a look at the default MkDocs template (optional).</strong></summary>
+
+  ```bash
+  mkdocs serve
+  ```
+</details>
 
 ## Selecting a Build Mode
 During setup the user will be prompted to select one of three possible build modes.
