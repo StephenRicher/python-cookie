@@ -51,9 +51,6 @@ project
   └───workflows
       │   tests.yaml
 ```
-```shell
-python3 -m pip install --upgrade cookiecutter
-```
 
 ## Quickstart
 Follow these steps to install dependencies and configure your Cookiecutter template.
@@ -67,7 +64,7 @@ Follow these steps to install dependencies and configure your Cookiecutter templ
   ```
 
   Windows
-  ```bash
+  ```powershell
   py -m pip install --upgrade cookiecutter
   ```
 </details>
