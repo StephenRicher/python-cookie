@@ -10,7 +10,7 @@
   * [Selecting a Build Mode](#selecting-a-build-mode)
     * [1. Package Only](#1-package-only)
     * [2. Command Line Interface (without subcommands)](#2-command-line-interface-without-subcommands)
-    * [3. Command Line Interface (with subcommands)](#2-command-line-interface-with-subcommands)
+    * [3. Command Line Interface (with subcommands)](#3-command-line-interface-with-subcommands)
   * [License](#license)
   * [Contact](#contact)
 
