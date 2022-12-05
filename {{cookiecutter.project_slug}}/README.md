@@ -5,7 +5,7 @@
 [![status: experimental](https://github.com/GIScience/badges/raw/master/status/experimental.svg)](https://github.com/GIScience/badges#experimental)
 ![build: status](https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/actions/workflows/tests.yaml/badge.svg)
 {% if cookiecutter.readme_type|lower == 'detailed' %}
-### Table of contents
+## Table of contents
 * [Features](#features)
 * [Installation](#installation)
 * [Usage](#usage)
@@ -13,10 +13,10 @@
 * [License](#license)
 * [Contact](#contact)
 
-### Features
+## Features
 A brief description of the projects primary features.
 
-### Installation
+## Installation
 Installation is possible via `pip` as shown below.
 
 Unix/macOS
@@ -29,11 +29,10 @@ Windows
 py -m pip install {{ cookiecutter.project_slug }}
 ```
 
-<details>
-  <summary><strong><font size="+1">Alternative Install Methods (optional)</font></strong></summary>
+#### Alternative Install Methods (optional)
 
 <details>
-  <summary><strong><font size="+0.5">1. Install within a Virtual Environment</font></strong></summary>
+  <summary><strong>1. Install within a Virtual Environment</strong></summary>
 
 <details>
   <summary><strong>Unix/macOS</strong></summary>
@@ -63,13 +62,12 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 </details>
 
 <details>
-<summary><strong><font size="+0.5">2. Install within a Docker container</font></strong></summary>
+<summary><strong>2. Install within a Docker container</strong></summary>
 
 ```bash
 docker build -t {{ cookiecutter.project_slug }} {{ cookiecutter.project_slug }}
 docker run -it {{ cookiecutter.project_slug }}
 ```
-</details>
 </details>
 
 ### Usage
