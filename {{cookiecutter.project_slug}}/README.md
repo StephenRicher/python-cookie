@@ -83,6 +83,8 @@ Any contributions you make are **greatly appreciated**.
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for detailed guidance.
+
 ### License
 Distributed under the MIT License. _See [LICENSE](./LICENSE) for more information._
 
