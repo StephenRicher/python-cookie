@@ -4,8 +4,9 @@
 
 [![status: experimental](https://github.com/GIScience/badges/raw/master/status/experimental.svg)](https://github.com/GIScience/badges#experimental)
 ![build: status](https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/actions/workflows/tests.yaml/badge.svg)
-{% if cookiecutter.readme_type|lower == 'detailed' %}
+
 ## Table of contents
+
 * [Features](#features)
 * [Installation](#installation)
 * [Usage](#usage)
@@ -14,9 +15,11 @@
 * [Contact](#contact)
 
 ## Features
+
 A brief description of the projects primary features.
 
 ## Installation
+
 Installation is possible via `pip` as shown below.
 
 Unix/macOS
@@ -64,16 +67,16 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 <details>
 <summary><strong>2. Install within a Docker container</strong></summary>
 
-```bash
-docker build -t {{ cookiecutter.project_slug }} {{ cookiecutter.project_slug }}
-docker run -it {{ cookiecutter.project_slug }}
-```
+See [here](./docker/README.md) for detailed guidance.
+
 </details>
 
-### Usage
+## Usage
+
 Some simple examples of basic usage.
 
-### Contributing
+## Contributing
+
 Contributions are what make the open source community such an amazing place to learn, inspire, and create.
 Any contributions you make are **greatly appreciated**.
 
@@ -85,31 +88,10 @@ Any contributions you make are **greatly appreciated**.
 
 See [CONTRIBUTING.md](./CONTRIBUTING.md) for detailed guidance.
 
-### License
+## License
+
 Distributed under the MIT License. _See [LICENSE](./LICENSE) for more information._
 
 ### Contact
+
 If you have any other questions please contact the author, [{{ cookiecutter.full_name }}](mailto:{{ cookiecutter.email }}?subject=[GitHub]%20{{ cookiecutter.project_slug }}).
-{% else %}
-### Features
-A brief description of the project's primary features.
-
-### Installation
-Installation is possible via `pip` as shown below.
-
-Unix/macOS
-```bash
-python3 -m pip install {{ cookiecutter.project_slug }}
-```
-
-Windows
-```bash
-py -m pip install {{ cookiecutter.project_slug }}
-```
-
-### Usage
-Some simple examples of basic usage.
-
-### License
-Distributed under the MIT License. _See [LICENSE](./LICENSE) for more information._
-{%- endif %}

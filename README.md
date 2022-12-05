@@ -3,6 +3,7 @@
 ## A simple template for building template modules and command-line interfaces in Python.
 
 ### Table of contents
+
   * [Features](#features)
   * [Project Structure](#project-structure)
   * [Quickstart](#quickstart)
@@ -16,9 +17,11 @@
 
 
 ### Features
+
 Outline key project features
 
 ### Project Structure
+
 ```bash
 project
 │   README.md            # Write documentation here.
@@ -53,6 +56,7 @@ project
 ```
 
 ## Quickstart
+
 Follow these steps to install dependencies and configure your Cookiecutter template.
 
 <details>
@@ -81,13 +85,14 @@ Follow these steps to install dependencies and configure your Cookiecutter templ
 </details>
 
 ## Recommended Setup
+
 Following template creation, follow these steps to get you started.
 
 <details>
   <summary><strong>1. Create a Git repository.</strong></summary>
 
   ```bash
-  cd package_name
+  cd <package_name>
   git init
   git add .
   git commit -m "Initial commit"
@@ -150,11 +155,13 @@ Following template creation, follow these steps to get you started.
 </details>
 
 ## Selecting a Build Mode
+
 During setup the user will be prompted to select one of three possible build modes.
 
 **Note: The following example uses the default example functions of the template and assumes the user has built the cookiecutter with default settings.**
 
 ### 1. Package Only
+
 Package modules without a command-line interface.
 
 ```python
@@ -166,8 +173,8 @@ True
 >>>
 ```
 
-
 ### 2. Command Line Interface (_without_ subcommands)
+
 Standard command line interface with single point of entry.
 
 ```console
@@ -187,8 +194,8 @@ optional arguments:
 Stephen Richer, (stephen.richer@proton.me)
 ```
 
-
 ### 3. Command Line Interface (_with_ subcommands)
+
 Command line interface with sub-commands offering multiple entry points.
 
 ```console
@@ -211,10 +218,10 @@ required commands:
 Stephen Richer, (stephen.richer@proton.me)
 ```
 
-
 ### License
+
 Distributed under the MIT License. _See [LICENSE](./LICENSE) for more information._
 
-
 ### Contact
+
 If you have any other questions please contact the author, [Stephen Richer](mailto:stephen.richer@proton.me?subject=[GitHub]%20python-cookie).
