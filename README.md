@@ -25,23 +25,28 @@ Outline key project features
 ```bash
 project
 │   README.md            # Write documentation here.
-│   LICENSE    
-│   Dockerfile
-│   pyproject.toml       # Update package version and dependencies etc.
+│   CONTRIBUTING.md
+│   CODE_OF_CONDUCT.md  
+│   LICENSE              # MIT License
+│   pyproject.toml       # Define version and dependencies etc.
 │   mkdocs.yml           # MkDocs mode only (optional)
 │   .gitignore
-│   .dockerignore
 │   
 └───src
 │   │
 │   └───project
 │       │   __init__.py
-│       │   project.py   # Write public-facing code, for user import, here.
-│       │   utils.py     # Write non-public code here.
-│       │   cli.py       # Command line mode only (optional)
+│       │   project.py    # Write public-facing code, for user import, here.
+│       │   utils.py      # Write non-public code here.
+│       │   cli.py        # Write CLI and entry-point functions here (optional).
+│       │   _cli_utils.py
 │   
 └───tests                # Write all your tests here.
 │   │   test_project.py
+│   
+└───docker                
+│   │   README.md        # Instructions on how to install package with Docker.
+│   │   Dockerfile
 │   
 └───docs                 # MkDocs mode only (optional)
 │   │   about.md
@@ -65,13 +70,13 @@ Follow these steps to install dependencies and configure your Cookiecutter templ
   Unix/macOS
   ```shell
   python3 -m pip install --upgrade \
-    cookiecutter twine setuptools mkdocs mkdocstrings[python]
+    pip cookiecutter twine setuptools mkdocs mkdocstrings[python]
   ```
 
   Windows
   ```powershell
   py -m pip install --upgrade \
-    cookiecutter twine setuptools mkdocs mkdocstrings[python]
+    pip cookiecutter twine setuptools mkdocs mkdocstrings[python]
   ```
 </details>
 

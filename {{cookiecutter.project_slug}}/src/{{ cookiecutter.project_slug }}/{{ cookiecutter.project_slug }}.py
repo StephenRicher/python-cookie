@@ -8,7 +8,8 @@ import {{ cookiecutter.project_slug }}.utils as utils
 
 logger = logging.getLogger(__name__)
 {% if cookiecutter.command_line_interface|lower == 'no' %}
-# Functions directly accessible from module level
+# HINT: Functions here are directly accessible from module level.
+# HINT: e.g. from {{ cookiecutter.project_slug }} import prime 
 __all__ = ['prime', 'fibonacci']
 {% endif %}
 
