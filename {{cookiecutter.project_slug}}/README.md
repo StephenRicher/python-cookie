@@ -73,7 +73,55 @@ See [here](./docker/README.md) for detailed guidance.
 
 ## Usage
 
-Some simple examples of basic usage.
+{% if cookiecutter.command_line_interface|lower == 'no' -%}
+```python
+>>> from {{ cookiecutter.project_slug }} import prime, fibonacci
+>>> prime(42)
+False
+>>> fibonacci(233)
+True
+>>>
+```
+{%- endif -%}
+{% if cookiecutter.command_line_interface|lower == 'yes (with subcommand)' -%}
+```console
+stephen@pc:$ {{ cookiecutter.project_slug }} --help
+usage: {{ cookiecutter.project_slug }} [-h] [--version] [--verbose] Commands ...
+
+{{ cookiecutter.project_short_description }}
+
+optional arguments:
+  -h, --help  show this help message and exit
+  --version   show program's version number and exit
+  --verbose   verbose logging for debugging
+
+required commands:
+
+  Commands    Description:
+    prime     Check if a number is prime.
+    fib       Check if a number is part of the fibonacci sequence.
+
+{{ cookiecutter.full_name.replace('\"', '\\\"') }}, ({{ cookiecutter.email }})
+```
+{%- endif -%}
+{% if cookiecutter.command_line_interface|lower == 'yes (without subcommand)' -%}
+```console
+stephen@pc:$ {{ cookiecutter.project_slug }} --help
+usage: {{ cookiecutter.project_slug }} [-h] [--version] [--verbose] [number]
+
+{{ cookiecutter.project_short_description }}
+
+positional arguments:
+  number      A number to test primality (default: 42)
+
+optional arguments:
+  -h, --help  show this help message and exit
+  --version   show program's version number and exit
+  --verbose   verbose logging for debugging
+
+{{ cookiecutter.full_name.replace('\"', '\\\"') }}, ({{ cookiecutter.email }})
+```
+{%- endif %}
 
 ## Contributing
 
