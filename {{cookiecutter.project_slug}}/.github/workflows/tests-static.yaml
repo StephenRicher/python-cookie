@@ -1,10 +1,11 @@
-name: build
+name: build-static
 
 on:
-    push:
-    pull_request:
-    schedule:
-        - cron: "0 8 * * 1"
+  push:
+    paths:
+      - .github/workflows/**
+      - requirements.txt
+      - tests/**
 
 jobs:
     parse-matrix:
@@ -33,11 +34,19 @@ jobs:
               with:
                   python-version: ${% raw %}{{ matrix.python-version }}{% endraw %}
 
-            - name: Install Package
+            - name: Check file existence
+              id: check_files
+              uses: andstor/file-existence-action@v2
+              with:
+                  files: "requirements.txt"
+
+            - name: Install Package (fixed requirements)
+              if: steps.check_files.outputs.files_exists == 'true'
               run: |
                 pip install pytest
-                pip install .
+                pip install -r requirements.txt
                 pip freeze
 
             - name: Run tests
+              if: steps.check_files.outputs.files_exists == 'true'
               run: python -m pytest .
