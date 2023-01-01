@@ -101,7 +101,35 @@ Following template creation, follow these steps to get you started.
   git init
   git add .
   git commit -m "Initial commit"
+  git branch -m production        # Production branch - hot fixes only.
+  git branch alpha                # Alpha branch - core development.
+  git branch beta                 # Beta branch - bug fixes only.
+  git checkout alpha
   ```
+
+<details>
+  <summary><strong>Branching Strategy</strong></summary>
+
+  ```bash
+  # First merge backwards: production > beta > alpha
+  git checkout beta
+  git merge production         # production > beta
+  git checkout alpha
+  git merge beta               # beta > alpha
+
+  # Then merge forwards: alpha > beta > production
+  git checkout beta
+  git merge alpha              # alpha > beta
+  git checkout production
+  git merge beta               # beta > production
+
+  git checkout alpha           # Revert back to development
+  # Then update tag, e.g.
+  # git tag -a "<tag_name>" -m "Bug fix."
+  git push --follow-tags --all # Push branches and annotated tags to remote.
+  ```
+
+</details>
 </details>
 
 <details>
