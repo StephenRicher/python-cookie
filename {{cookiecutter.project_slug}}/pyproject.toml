@@ -34,5 +34,5 @@ dependencies = [
 repository = 'https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}'
 {% if 'no' not in cookiecutter.command_line_interface|lower %}
 [project.scripts]
-{{ cookiecutter.project_slug }} = "{{ cookiecutter.project_slug }}.cli:parseArgs"
+{{ cookiecutter.project_slug }} = "{{ cookiecutter.project_slug }}.cli:main"
 {% endif %}
