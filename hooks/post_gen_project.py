@@ -8,6 +8,8 @@ REMOVE_PATHS = [
     '{%- if cookiecutter.command_line_interface|lower == "no" %} '
     'src/{{ cookiecutter.project_slug }}/cli.py {% endif %}',
     '{%- if cookiecutter.command_line_interface|lower == "no" %} '
+    'src/{{ cookiecutter.project_slug }}/tests/test_cli.py {% endif %}',
+    '{%- if cookiecutter.command_line_interface|lower == "no" %} '
     'src/{{ cookiecutter.project_slug }}/_cli_utils.py {% endif %}',
     '{%- if cookiecutter.include_mkdocs|lower == "no" %} '
     'mkdocs.yml {% endif %}',

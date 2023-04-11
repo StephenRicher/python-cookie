@@ -12,6 +12,7 @@ class OptionsParser():
                  epilog: str = '', version: str = ''):
         self.argv = argv
         self.epilog = epilog
+        self.version = version
         self.base_parser = self._get_base_parser(version)
 
     def prepare_subparser(self) -> tuple[argparse.ArgumentParser, argparse._SubParsersAction]:
@@ -51,7 +52,7 @@ class OptionsParser():
                              parser: argparse.ArgumentParser) -> None:
         if (self.subparser) and ('function' not in args):
             parser.print_help()
-            sys.exit()
+            sys.exit(2)
 
 
 class IntRange:

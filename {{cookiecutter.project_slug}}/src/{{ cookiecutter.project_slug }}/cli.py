@@ -82,14 +82,14 @@ def main(argv: list[str] | None = None) -> int | None:
     logging.shutdown()
     return rc
 
-    
+
 # HINT: CLI entry-point function which takes command-line arguments.
 def prime_cli(number: int) -> bool:
     """ Check if an input number is prime. """
     if prime(number):
         print(f'{number} is a prime number!')
     else:
-        print(f'{number} is not prime number!')
+        print(f'{number} is not a prime number!')
 
 {% if cookiecutter.command_line_interface|lower == 'yes (with subcommand)' %}
 def fibonacci_cli(number: int) -> bool:

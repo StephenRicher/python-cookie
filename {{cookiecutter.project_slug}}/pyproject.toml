@@ -11,7 +11,7 @@ authors = [
 ]
 description = '{{ cookiecutter.project_short_description }}'
 readme = 'README.md'
-requires-python = ">=3.7"
+requires-python = ">=3.8"
 keywords = ['{{ cookiecutter.project_slug }}']
 license = {file = "LICENSE"}
 classifiers=[
@@ -20,7 +20,6 @@ classifiers=[
     'Development Status :: 1 - Planning',
     'License :: OSI Approved :: MIT License',
     'Programming Language :: Python :: 3',
-    'Programming Language :: Python :: 3.7',
     'Programming Language :: Python :: 3.8',
     'Programming Language :: Python :: 3.9',
     'Programming Language :: Python :: 3.10',
@@ -29,7 +28,10 @@ classifiers=[
 # HINT: Define you package dependencies here.
 dependencies = [
 ]
-
+[tool.pytest.ini_options]
+addopts = [
+    '--import-mode=importlib',
+]
 [project.urls]
 repository = 'https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}'
 {% if 'no' not in cookiecutter.command_line_interface|lower %}
